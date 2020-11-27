@@ -2,11 +2,14 @@
 :root{
   --background-color: #181818;
   --background-color-2: #ffffff;
+  --font-color-1: #000000;
   //#fab94f
 }
+
 body{
   background: var(--background-color);
 }
+
 nav{
   display: flex;
   flex-direction: row;
@@ -73,11 +76,13 @@ nav{
     }
   }
 }
+
 .section-main{
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 16px);
+  height: calc(98vh);
 }
+
 .about_me{
   width: 100%;
   margin-top: 40px;
@@ -86,9 +91,9 @@ nav{
     display: flex;
     justify-content: center;
     .photo_frame{
-      width: 220px;
-      height: 220px;
-      margin-top: 80px;
+      width: 16vw;
+      height: 16vw;
+      margin-top: 8vh;
       background: var(--background-color-2);
       border-radius: 100%;
       display: flex;
@@ -118,10 +123,6 @@ nav{
       }
     }
   }
-  .about_orament{
-    width: 16px;
-    background: var(--background-color-2);
-  }
   .about_right{
     width: 100%;
     background: var(--background-color);
@@ -132,22 +133,94 @@ nav{
     article{
       width: 80%;
       height: 40%;
-      background: var(--background-color-2);
       border-radius: 20px;
+      overflow-y: hidden;
+
       h1{
+        color: var(--font-color-1);
         font-size: 2.5rem;
-        margin: 10px;
+        padding: 1vw 1vw;
         letter-spacing: 2px;
+        background: rgba(255, 255, 255, 0.5);
       }
       p{
+        color: var(--font-color-1);
         font-size: 1.5rem;
-        margin: 0 10px;
+        padding: 1vw 1vw;
+        background: rgba(255, 255, 255, 0.5);
       }
+    }
+    .article_1{
+      background: url("../images/computer_bg.jpg") right 0 fixed;
+      background-size: 84vw 92vh;
+    }
+    .article_2{
+      background: url("../images/guitarist_me.jpg") fixed;
+      background-size: 100vw 110vh;
     }
   }
 }
+
+.skills{
+  .skills_left{
+    width: 100%;
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .skills_right{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .ornament_horizontal{
   width: 100%;
-  height: 16px;
+  height: 2vh;
   background: var(--background-color-2);
+}
+
+.ornament_vertical{
+  //width: 16px;
+  width: 2vw;
+  background: var(--background-color-2);
+}
+
+@media (max-width: 700px){
+  nav{
+    .nav_links{
+      .nav_link{
+        width: 100px;
+        a{
+          font-size: 14px;
+        }
+      }
+    }
+
+  }
+  .about_me{
+    .about_right{
+      article{
+        width: 70%;
+        h1{
+          font-size: 2rem;
+        }
+        p{
+          font-size: 1rem;
+        }
+      }
+      .article_1{
+        background: url("../images/computer_bg.jpg") center 0 fixed;
+        background-size: 80vw 50vh;
+      }
+      .article_2{
+        background: url("../images/guitarist_me.jpg") 0 30px fixed;
+        background-size: 100vw 100vh;
+      }
+    }
+  }
 }
