@@ -239,8 +239,8 @@ nav{
     }
     .project_item{
       text-align: center;
-      width: 150px;
-      height: 140px;
+      width: 140px;
+      height: 120px;
       overflow: hidden;
       color: white;
       a{
@@ -250,6 +250,7 @@ nav{
           color: #a7a7a7;
         }
       }
+      z-index: -100;
       img{
         width: 100%;
       }
@@ -328,12 +329,14 @@ nav{
   width: 100%;
   height: 2vh;
   background: var(--background-color-2);
+  overflow: hidden;
 }
 
 .ornament_vertical{
   //width: 16px;
   width: 2vw;
   background: var(--background-color-2);
+  overflow: hidden;
 }
 @media (max-width: 1200px){
   #projects_container{
